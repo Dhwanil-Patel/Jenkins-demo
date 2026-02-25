@@ -38,7 +38,7 @@
     </dependencies>
 
     <build>
-        <finalName>Jenkins-demo-service</finalName>
+        <finalName>Jenkins-demo</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -54,7 +54,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.4.2</version>
                 <configuration>
-                    <finalName>Jenkins-demo-service</finalName>
+                    <finalName>Jenkins-demo</finalName>
                     <archive>
                         <manifest>
                             <addClassPath>true</addClassPath>
