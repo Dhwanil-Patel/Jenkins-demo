@@ -54,10 +54,10 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.4.2</version>
                 <configuration>
-                    <finalName>Jenkins-demo</finalName>
+<!--                    <finalName>Jenkins-demo</finalName>-->
                     <archive>
                         <manifest>
-                            <addClassPath>true</addClassPath>
+                            <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
                             <mainClass>com.learnings.jenkinsdemo.JenkinsDemoApplication</mainClass>
                         </manifest>
