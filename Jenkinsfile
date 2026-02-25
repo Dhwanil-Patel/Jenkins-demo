@@ -1,14 +1,16 @@
 pipeline {
 	agent any
 	stages {
-		stage ("Resource CLeanuo") {
+		stage ("Resource Cleanup") {
 			steps {
 				deleteDir()
 			}
 		}
 		stage ("Clone") {
 			steps {
-				git url:"https://github.com/Dhwanil-Patel/Jenkins-demo.git", branch:"develop"
+				dir("Jenkins-demo-service") {
+					git url:"https://github.com/Dhwanil-Patel/Jenkins-demo.git", branch:"develop"
+				}
 			}
 		}
 		stage ("Build") {
