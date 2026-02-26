@@ -2,16 +2,18 @@ pipeline {
 	agent any
 	parameters {
 		booleanParam(name: 'status', defaultValue: false, description: 'Execution status')
-		string(name: 'environment', defaultValue: "develop", description: 'Deploy on environment')
+		string(name: 'author', defaultValue: "Dhwanil", description: 'Person who deploy')
 		text(name: 'description', defaultValue: "This is Spring Boot Application. \nDefine how to deploy app on jenkins.", description: 'Jenkins Demo')
+		choice(name: 'environment', choices: ['development', 'test', 'stage'], description: 'Environment you willing to deploy')
 	}
 	stages {
 		stage ("Resource Cleanup") {
 			steps {
 				deleteDir()
 				echo "Application status: ${params.status}"
-				echo "Application deploy on environment: ${params.environment}"
+				echo "Application deploy by: ${params.author}"
 				echo "Application discription: ${params.description}"
+				echo "Application deploy on environment: ${params.environment}"
 			}
 		}
 		stage ("Clone") {
